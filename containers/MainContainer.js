@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import { inject , observer} from 'mobx-react';
-import LoginContainer from './LoginContainer'
-import MapContainer from './MapContainer'
+import LoginContainer from './LoginContainer';
+import HomeContainer from './HomeContainer';
 
-@inject('userStore','appStore')
+@inject('homeStore')
 @observer
 export default class MainContainer extends Component {
 
   render() {
-    if (this.props.userStore.isLogin) {
+    if (this.props.homeStore.isLogin) {
       return (
-        < MapContainer/>
+        <HomeContainer />
       );
     } else {
       return (

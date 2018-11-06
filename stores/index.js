@@ -1,7 +1,6 @@
-import AppStore from './AppStore';
+import HomeStore from './HomeStore';
 import UserStore from './UserStore';
-
 export default {
-  appStore: new AppStore(),
+  homeStore: new HomeStore(),
   userStore: new UserStore(),
 };
